@@ -1,0 +1,99 @@
+Copyright (c) 1995-2004 Functional Objects, Inc.
+
+Portions copyright (c) 2004-2023 Dylan Hackers.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Portions of this software are derived from the Gwydion Dylan
+project at Carnegie Mellon University:
+
+    Copyright (c) 1994  Carnegie Mellon University
+    All rights reserved.
+
+    Use and copying of this software and preparation of derivative
+    works based on this software are permitted, including commercial
+    use, provided that the following conditions are observed:
+
+    1. This copyright notice must be retained in full on any copies
+       and on appropriate parts of any derivative works.
+    2. Documentation (paper or online) accompanying any system that
+       incorporates this software, or any part of it, must acknowledge
+       the contribution of the Gwydion Project at Carnegie Mellon
+       University.
+
+    This software is made available "as is".  Neither the authors nor
+    Carnegie Mellon University make any warranty about the software,
+    its performance, or its conformity to any specification.
+
+    Bug reports, questions, comments, and suggestions should be sent by
+    E-mail to the Internet address "gwydion-bugs@cs.cmu.edu".
+
+A copy of this license may be obtained here:
+https://raw.github.com/dylan-lang/opendylan/master/License.txt
+
+
+Memory Pool System Kit Open Source License
+==========================================
+
+This is the license under which the Memory Pool System Kit is made
+available by Ravenbrook Limited. This license is generally known as
+the `BSD 2-clause license`_.  It is `GPL compatible`_ and
+`OSI approved`_.
+
+For avoidance of doubt, this license supersedes any older licenses
+that may appear in other files that are part of this distribution
+and in any of its branches.
+
+Prior to 2020, the MPS was "multi-licensed" under the `Sleepycat
+License`_ and also by other specifically arranged license agreements.
+
+.. _Sleepycat License: https://en.wikipedia.org/wiki/Sleepycat_License
+.. _GPL compatible: https://www.gnu.org/licenses/license-list.html
+.. _OSI approved: https://opensource.org/licenses/sleepycat
+.. _BSD 2-clause license: https://opensource.org/licenses/BSD-2-Clause
+
+License
+-------
+
+Copyright © 2001-2020 `Ravenbrook Limited <https://www.ravenbrook.com/>`_.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
