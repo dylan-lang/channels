@@ -19,28 +19,28 @@ define test test-defaults--object-is-callback ()
   local method inc-count2 (message) count2 := count2 + message end method;
 
   broadcast(channel, 1);
-  check-true("Count1 not yet changed", count1 = 1);
-  check-true("Count2 not yet changed", count2 = 2);
+  check-equal("Count1 not yet changed", 1, count1);
+  check-equal("Count2 not yet changed", 2, count2);
 
   tune-in(channel, inc-count1);
   broadcast(channel, 1);
-  check-true("Count1 now 2", count1 = 2);
-  check-true("Count2 not yet changed", count2 = 2);
+  check-equal("Count1 now 2", 2, count1);
+  check-equal("Count2 not yet changed", 2, count2);
 
   tune-in(channel, inc-count2);
   broadcast(channel, 1);
-  check-true("Count1 now 3", count1 = 3);
-  check-true("Count2 now 3", count2 = 3);
+  check-equal("Count1 now 3", 3, count1);
+  check-equal("Count2 now 3", 3, count2);
 
   tune-out(channel, inc-count1);
   broadcast(channel, 1);
-  check-true("Count1 still 3", count1 = 3);
-  check-true("Count2 now 4", count2 = 4);
+  check-equal("Count1 still 3", 3, count1);
+  check-equal("Count2 now 4", 4, count2);
 
   tune-out(channel, inc-count2);
   broadcast(channel, 1);
-  check-true("Count1 still 3", count1 = 3);
-  check-true("Count2 still 4", count2 = 4);
+  check-equal("Count1 still 3", 3, count1);
+  check-equal("Count2 still 4", 4, count2);
 end test;
 
 define test test-unique-object-as-receiver-key ()
@@ -52,11 +52,11 @@ define test test-unique-object-as-receiver-key ()
                                        count := count + message
                                      end);
   broadcast(channel, 1);
-  check-true("Count now 1", count = 1);
+  check-equal("Count now 1", 1, count);
 
   tune-out(channel, object);
   broadcast(channel, 1);
-  check-true("Count still 1", count = 1);
+  check-equal("Count still 1", 1, count);
 end test;
 
 define test test-no-message-passed--channel-property ()
@@ -67,7 +67,7 @@ define test test-no-message-passed--channel-property ()
         end;
   tune-in(channel, inc-count);
   broadcast(channel, 1);
-  check-true("Count now 2", count = 2);
+  check-equal("Count now 2", 2, count);
 end test;
 
 define test test-no-message-passed--receiver-property ()
@@ -78,7 +78,7 @@ define test test-no-message-passed--receiver-property ()
         end;
   tune-in(channel, inc-count, message?: #f);
   broadcast(channel, 1);
-  check-true("Count now 2", count = 2);
+  check-equal("Count now 2", 2, count);
 end test;
 
 define test test-receiver-passed--channel-property ()
@@ -90,7 +90,7 @@ define test test-receiver-passed--channel-property ()
         end;
   tune-in(channel, object, callback: inc-count);
   broadcast(channel, 1);
-  check-true("Receiver passed", object == maybe-object);
+  check-equal("Receiver passed", object, maybe-object);
 end test;
 
 define test test-receiver-passed--receiver-property ()
@@ -102,7 +102,7 @@ define test test-receiver-passed--receiver-property ()
         end;
   tune-in(channel, object, receiver?: #t, callback: set-maybe-object);
   broadcast(channel, 1);
-  check-true("Receiver passed", object == maybe-object);
+  check-equal("Receiver passed", object, maybe-object);
 end test;
 
 define test test-message-type ()
@@ -130,7 +130,7 @@ define test test-channel-defines-callback ()
   tune-in(channel, #f);
   tune-in(channel, #t);
   broadcast(channel, 1);
-  check-true("Count now 2", count = 2);
+  check-equal("Count now 2", 2, count);
 end test;
 
 define test test-receiver-overrides-channel ()
@@ -147,8 +147,8 @@ define test test-receiver-overrides-channel ()
                       count := count + 9
                     end);
   broadcast(channel, 1);
-  check-true("Count now 10", count = 10);
-  check-true("Receiver now #t", receiver = #t);
+  check-equal("Count now 10", 10, count);
+  check-equal("Receiver now #t", #t, receiver);
 end test;
 
 define test test-broadcaster-passes-extra-arguments ()
@@ -159,7 +159,7 @@ define test test-broadcaster-passes-extra-arguments ()
         end;
   tune-in(channel, inc-count);
   broadcast(channel, 1, 99);
-  check-true("Count now 100", count = 100);
+  check-equal("Count now 100", 100, count);
 end test;
 
 define test test-override-channel ()
@@ -177,6 +177,6 @@ define test test-override-channel ()
 					  receiver?: #t,
 					  callback: inc-count),
 			 #"ignored");
-  check-true("Result now #T", result = #t);
-  check-true("Count now 3", count = 3);
+  check-equal("Result now #t", #t, result);
+  check-equal("Count now 3", 3, count);
 end test;
